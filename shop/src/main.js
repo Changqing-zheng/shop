@@ -21,6 +21,7 @@ Vue.use(NavBar).use(Icon).use(Tabbar).use(TabbarItem).use(Swipe).use(SwipeItem).
 
 import '@/assets/css/reset.css'
 import '@/assets/js/rem.js'
+import "@/mock/mock.js"
 
 new Vue({
   router,

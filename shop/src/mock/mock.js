@@ -15,4 +15,4 @@ let getVarityItem = res => {
   return productList;
 };
 
-Mock.mock("https://www.zcq.com/getVarietyItem", getVarityItem());
+Mock.mock("http://www.zcq.com/getVarietyItem", getVarityItem());

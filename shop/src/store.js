@@ -5,20 +5,20 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    // userInfo: {
-    //   userName: "未登录"
-    // }
+    userInfo: {
       userName: "未登录"
+    }
+    //   userName: ""
   },
   getters: {//类似vue的computed
 
   },
   mutations: {
     changeLogin(state, status){
-      state.userName = status;
+      state.userInfo = status;
     },
     logout(state, status){
-      state.userName = "未登录";
+      state.userInfo.userName = "未登录";
     }
   },
   actions: {

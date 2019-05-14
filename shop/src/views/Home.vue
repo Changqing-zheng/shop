@@ -2,7 +2,7 @@
   <div class="container">
       <van-nav-bar title="首页" class="nav-title">
           <van-icon name="search" slot="left"></van-icon>
-          <van-icon @click="logout" slot="right">{{userName}}</van-icon>
+          <van-icon @click="logout" slot="right">{{userInfo.userName === "未登录" ? "未登录" : userInfo.userName}}</van-icon>
       </van-nav-bar>
       <!--轮播图-->
       <div class="carousel">
@@ -180,12 +180,13 @@ export default {
         })
     },
     computed: {
-        ...mapState(["userName"])
+        ...mapState(["userInfo"])
     },
     methods: {
         ...mapActions(["logoutAction"]),
         logout(){
-            if(this.$store.state.userName == "未登录"){
+            console.log(this.$store.state);
+            if(this.$store.state.userInfo.userName == "未登录"){
                 this.$router.push("/Profile")
             }else{
                 this.$dialog.confirm({

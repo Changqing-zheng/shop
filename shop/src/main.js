@@ -16,8 +16,8 @@ Vue.config.productionTip = false;
 // import {Button} from 'vant';
 // Vue.use(Button);
 
-import {Dialog, Toast, Button, CellGroup, Field, Tab, Tabs, NavBar, Icon, Tabbar, TabbarItem, Swipe, SwipeItem, Lazyload } from 'vant';
-Vue.use(Dialog).use(Toast).use(Button).use(CellGroup).use(Field).use(Tab).use(Tabs).use(NavBar).use(Icon).use(Tabbar).use(TabbarItem).use(Swipe).use(SwipeItem).use(Lazyload);
+import {SubmitBar, Card, GoodsAction, GoodsActionBigBtn, GoodsActionMiniBtn,PullRefresh, List, Row, Col, Dialog, Toast, Button, CellGroup, Field, Tab, Tabs, NavBar, Icon, Tabbar, TabbarItem, Swipe, SwipeItem, Lazyload } from 'vant';
+Vue.use(SubmitBar).use(Card).use(GoodsAction).use(GoodsActionBigBtn).use(GoodsActionMiniBtn).use(PullRefresh).use(List).use(Row).use(Col).use(Dialog).use(Toast).use(Button).use(CellGroup).use(Field).use(Tab).use(Tabs).use(NavBar).use(Icon).use(Tabbar).use(TabbarItem).use(Swipe).use(SwipeItem).use(Lazyload);
 
 import '@/assets/css/reset.css'
 import '@/assets/js/rem.js'

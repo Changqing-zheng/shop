@@ -54,10 +54,10 @@
                         this.registUsername = ""
                         this.registPassword = ""
                     }else{
-                        this.$toast.fail("注册失败1")
+                        this.$toast.fail("注册失败")
                     }
                 }).catch(err => {
-                    this.$toast.fail("注册失败11")
+                    this.$toast.fail("注册失败")
                     console.log(err)
                 })
             }
@@ -74,8 +74,10 @@
                 if(res.data.code == 200){
                     //保存登录状态
                     this.loginAction(res.data.userName);
-                    this.$router.push("/")
+                    this.$router.go(-1)
                     this.$toast.success("登录成功")
+                    this.loginUsername = "";
+                    this.loginPassword = ""
                 }else if(res.data.code == 201){
                     this.$toast.fail("密码错误")
                 }else{
